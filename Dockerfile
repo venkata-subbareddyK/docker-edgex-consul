@@ -46,7 +46,7 @@ LABEL license='SPDX-License-Identifier: Apache-2.0' \
 Copyright (c) 2019: Intel Corporation'
 
 # for pg_isready to check when kong-db is ready
-RUN apk add postgresql-client jq=1.6rc2 curl=7.64.0-r3
+RUN apk add postgresql-client jq=1.6~rc1-r0 curl=7.64.0-r3
 
 COPY scripts /consul/scripts
 COPY --from=builder /go/src/github.com/edgexfoundry/docker-edgex-consul/health /consul/scripts/health
